@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Test from '../views/Test.vue'
+import axios from 'axios'
 
 Vue.use(VueRouter)
+Vue.use(axios)
+
 
 const routes = [
   {
@@ -13,10 +17,12 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: Test
   }
 ]
 
