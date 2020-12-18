@@ -32,7 +32,8 @@ export default {
         },
         methods: {
           indexUserSocieteList() {
-                axios.get("http://laboratoireainitti.ma/indexUserSocieteList").then(({ data }) => (this.userDatas = data));
+            
+                axios.get("https://laboratoireainitti.ma/indexUserSocieteList").then(({ data }) => (this.userDatas = data));
             },
         }
 }
